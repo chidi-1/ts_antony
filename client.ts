@@ -13,7 +13,7 @@ export type El = {
     rules: Array<checkerType>
 }
 
-type checkerType = (
+export type checkerType = (
     client: Client,
     el: El
 ) => boolean

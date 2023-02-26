@@ -1,4 +1,4 @@
-import {Client, El} from "./client";
+import {checkerType, Client, El} from "./client";
 
 export class Bouncer {
     atWork:boolean
@@ -8,7 +8,7 @@ export class Bouncer {
         this.atWork = true;
     }
 
-    verify (client: Client): boolean {
+    verify (client: Client): [boolean, null | checkerType] {
         if (!this.atWork) {
             return [true, null];
         }
